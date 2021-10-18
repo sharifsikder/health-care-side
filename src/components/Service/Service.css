@@ -13,7 +13,7 @@
 
 .service:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.466), 0 6px 20px 0 rgba(0, 0, 0, 0.349);
-    transform: scale(1.03);
+    transform: scale(1.02);
  
 }
 .card{
@@ -24,4 +24,8 @@
     color: rgb(3, 195, 209);
     font-size: 25px;
     margin-bottom:15px;
+}
+
+.borders{
+    border:2px solid rgb(4, 207, 112) !important
 }

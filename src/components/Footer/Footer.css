@@ -1,21 +1,20 @@
 .footer-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #1D1C1F;
-    padding:40px 0;
+    background-color: #083B46;
+    padding:40px 0 8px 0;
 }
 .contact{
     text-align: left !important;
     margin-left: 100px;
-    color:white
+    color: silver
 }
-.contact h1{
-    color:#F6520A !important;
-    margin-bottom: 15px;
+.contact i{
+    color:white !important;
+}
 
-}
 .course-list{
-    color:white;
+    color:silver;
     list-style: none;
     cursor: pointer;
     margin-top:15px
@@ -24,22 +23,84 @@
     text-decoration: underline;
 }
 .course-link h2{
-    color:rgb(0, 255, 242)
+    color:rgb(255, 255, 255)
 
 }
 .icon{
     margin-left: 10px;
-    color:rgb(250, 234, 4);
+    color:rgb(255, 255, 255);
     font-size: 30px;
     cursor: pointer;
+    transition: .5s;
 
 }
+
+.icon:hover {
+    color:rgb(5, 252, 240) !important; 
+}
 .contact-site{
-    color:rgb(255, 0, 140);
-    margin-top:80px
+    color:rgb(248, 223, 1);
+    margin-top:40px
 }
 
 .copy-right{
     color:white;
+    background-color: #083B46;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  
+}
+
+
+/* Make it responsive */
+
+@media only screen and (max-width:688px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .contact{
+       margin: 0 auto;
+        color:silver;
+    }
+    .contact i{
+        color:white !important;
+    }
+
+    .course-link{
+        display: none;
+    }   
+
+    .contact-site{
+       
+        margin-top:20px
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .course-link{
+        display: none;
+    } 
+
+    .contact{
+        margin: 0 auto;
+         color: silver;
+     }
+
+     .contact i{
+        color:white !important;
+    }
+    .contact-site{
+       
+        margin-top:5px
+    }
   
 }

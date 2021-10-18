@@ -1,0 +1,110 @@
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.651)), url("https://media.istockphoto.com/photos/got-a-problem-contact-us-picture-id1129113667?b=1&k=20&m=1129113667&s=170667a&w=0&h=AMnkUYUNIqg4j5j5ZiIPaFGCIty-nH2MzVREipAoV28=");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .hero-text p{
+      color: silver !important;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+
+
+  .contact-section{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 40px 0;
+      background-color: rgb(224, 224, 224);
+  }
+
+  .form-button{
+      text-align: left;
+    
+  }
+  .form-button Button{
+      border:0;
+      border-radius: 5px;
+      padding:8px 20px;
+      background-color: #E0E0E0;
+      color: rgb(4, 124, 118);
+    
+      border: 2px solid  rgb(4, 124, 118);
+      transition: .5s;
+      
+  }
+
+  .form-button Button:hover{
+      background-color: rgb(8, 104, 104);
+      color:rgb(248, 248, 248)
+  }
+
+
+
+  /* Make it responsive */
+
+@media only screen and (max-width:896px) {
+    .contact-section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .form-img img{
+        width: 100%;
+        padding: 0 15px;
+        border-radius: 7px;
+        margin-bottom: 25px;
+    }
+
+    .form-section{
+
+      
+        width:100%;
+        text-align: center;
+      
+    }
+    .form-section Form{
+        margin-left: 15%;
+    }
+    
+}
+
+@media only screen and (min-width:899px) and (max-width:1080px) {
+    .contact-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .form-section Form{
+        margin-left: 15%;
+    }
+    
+    
+}

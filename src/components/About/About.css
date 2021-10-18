@@ -1,0 +1,83 @@
+
+.about-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.istockphoto.com/photos/-picture-id1311934969?b=1&k=20&m=1311934969&s=170667a&w=0&h=UQ3F8CE5zam5mT5swIliZ9nO7dhX4ZzsALMufFdv6Ys=");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  .border{
+      border:2px solid rgb(4, 219, 87) !important
+  }
+
+  .about-doctors{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 7px;
+      row-gap: 10px;
+      margin-bottom: 30px;
+     
+  }
+
+  .img-height{
+      height: 260px !important;
+  }
+
+  .doctor{
+      margin:0 auto;
+      transition: .7s;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .doctor:hover{
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.466), 0 6px 20px 0 rgba(0, 0, 0, 0.349);
+  }
+
+
+
+  @media only screen and (max-width:688px) {
+    .about-doctors{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+        
+    }
+    
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .about-doctors{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        
+    }
+    
+}
