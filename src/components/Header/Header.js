@@ -8,7 +8,13 @@ const Header = () => {
            <>
          <Navbar collapseOnSelect expand="lg" bg="dark" sticky="top" variant="dark">
   <Container>
-  <Navbar.Brand href="#home">Dental Clinic</Navbar.Brand>
+  <Navbar.Brand href="#home">  <img
+        src="http://world5.commonsupport.com/jewel/Dentalclinic/img/resources/footer-logo.png"
+        width="200"
+        height="50"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+      /></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ms-auto">

@@ -1,0 +1,45 @@
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #1D1C1F;
+    padding:40px 0;
+}
+.contact{
+    text-align: left !important;
+    margin-left: 100px;
+    color:white
+}
+.contact h1{
+    color:#F6520A !important;
+    margin-bottom: 15px;
+
+}
+.course-list{
+    color:white;
+    list-style: none;
+    cursor: pointer;
+    margin-top:15px
+}
+.course-list p:hover{
+    text-decoration: underline;
+}
+.course-link h2{
+    color:rgb(0, 255, 242)
+
+}
+.icon{
+    margin-left: 10px;
+    color:rgb(250, 234, 4);
+    font-size: 30px;
+    cursor: pointer;
+
+}
+.contact-site{
+    color:rgb(255, 0, 140);
+    margin-top:80px
+}
+
+.copy-right{
+    color:white;
+  
+}
