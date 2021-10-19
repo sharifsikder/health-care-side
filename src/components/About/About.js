@@ -1,4 +1,4 @@
-import Button from '@restart/ui/esm/Button';
+
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import './About.css'

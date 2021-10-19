@@ -8,8 +8,8 @@ const Contact = () => {
         <>
         <div>
             
-            <div class="hero-image">
-  <div class="hero-text">
+            <div class="contact-image">
+  <div class="contact-text">
     <h1>CONTACT US</h1>
     <p>Dentures actually improve our smiles and overall apperance. Not only they make us look better, but also make our life easier.</p>
     
@@ -40,7 +40,7 @@ const Contact = () => {
     <Form.Control as="textarea" rows={4} placeholder="Message" />
   </Form.Group>
 
-  <div className="form-button mt-4">
+  <div className="form-button mt-">
   <Button variant="warning" type="submit">
     Submit
   </Button>

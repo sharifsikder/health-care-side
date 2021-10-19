@@ -4,15 +4,18 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
-import Login from './components/Login/Login';
+
 import Services from './components/Services/Services';
 import NotFound from './components/NotFound/NotFound';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Register from './components/Register/Register';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Header></Header>
       <Switch>
@@ -32,8 +35,8 @@ function App() {
       <Route path="/contact">
         <Contact></Contact>
       </Route>
-      <Route path="/login">
-        <Login></Login>
+      <Route path="/register">
+        <Register></Register>
       </Route>
 
       <Route path="*">
@@ -43,6 +46,7 @@ function App() {
       </Switch>
       <Footer></Footer>
       </Router>
+      </AuthProvider>
     </div>
   );
 }

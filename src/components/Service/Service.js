@@ -4,7 +4,7 @@ import './Service.css'
 
 const Service = (props) => {
     console.log(props.service)
-    const{name, img, id, discreption} = props.service;
+    const{name, img, discreption} = props.service;
 
     return (
       

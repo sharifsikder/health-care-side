@@ -1,5 +1,5 @@
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.651)), url("https://media.istockphoto.com/photos/got-a-problem-contact-us-picture-id1129113667?b=1&k=20&m=1129113667&s=170667a&w=0&h=AMnkUYUNIqg4j5j5ZiIPaFGCIty-nH2MzVREipAoV28=");
+.contact-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.651)), url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29udGFjdCUyMHVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
     height: 350px;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
     position: relative;
   }
   
-  .hero-text {
+  .contact-text {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -15,11 +15,11 @@
     transform: translate(-50%, -50%);
     color: white;
   }
-  .hero-text p{
+  .contact-text p{
       color: silver !important;
   }
   
-  .hero-text button {
+  .contact-text button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -30,7 +30,7 @@
     cursor: pointer;
   }
   
-  .hero-text button:hover {
+  .contact-text button:hover {
     background-color: #555;
     color: white;
   }
