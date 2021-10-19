@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = (props) => {
     console.log(props.service)
-    const{name, img, discreption} = props.service;
+    const{name, img, id, discreption} = props.service;
 
     return (
       
@@ -17,7 +18,7 @@ const Service = (props) => {
            <Card.Text>
            {discreption}
            </Card.Text>
-           <Button className="mb-4 mt-3" variant="outline-success">Details</Button>
+           <Link to={`/service/${id}`}> <Button className="mb-4 mt-3" variant="outline-success">Details</Button></Link>
            </Card.Body>
            </Card>
       </div>

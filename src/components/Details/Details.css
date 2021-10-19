@@ -1,0 +1,13 @@
+.details{
+    background-color: rgb(72, 3, 117);
+}
+
+
+/* Make it responsive */
+
+@media only screen and (max-width:688px) {
+   .details img{
+       width:85%;
+   }
+}
+
