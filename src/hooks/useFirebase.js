@@ -71,13 +71,10 @@ const useFirebase = () => {
         .then(result => {
             setUser(result.user);
             console.log(result.user);
-            setError('Registation successful')
             setUserName()
           
         })
-        .catch((error) => {
-            setError(error.message)
-        }) 
+        
     }
 
     const setUserName = () =>{
@@ -87,7 +84,7 @@ const useFirebase = () => {
 
     const signInEmail = (e) => {  
      return signInWithEmailAndPassword(auth, email, password)
-     
+  
     }
 
     return{
@@ -97,6 +94,7 @@ const useFirebase = () => {
         email,
         password,
         isLoading,
+        setError,
         logOut,
         googleSingIn,
         handelName,

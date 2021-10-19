@@ -6,14 +6,14 @@ import useAuht from '../../hooks/useAuth';
 
 const Login = () => {
 
-    const {  error, signInEmail, HandelEmail, HandelPassword, googleSingIn } = useAuht()
+    const {  error, signInEmail, HandelEmail, HandelPassword, googleSingIn} = useAuht()
 
     const location = useLocation();
     const history = useHistory();
 
     // const redirect_uri = location.state?.from || "/serviceDetails";
 
-    const { from } = location.state || { from: { pathname: "/serviceDetails" } };
+    const { from } = location.state || { from: { pathname: "/" } };
 
 
     const handleGoogleLogin = () => {
@@ -22,6 +22,7 @@ const Login = () => {
                 // history.push(redirect_uri);
                 history.replace(from)
             })
+           
     }
 
     const HandelPasswordLogin = (e) => {
@@ -31,6 +32,7 @@ const Login = () => {
                 history.replace(from);
                 
             })
+           
     }
 
     return (
