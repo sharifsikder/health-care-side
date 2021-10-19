@@ -1,5 +1,6 @@
 import initializeAuthentiCation from "../Firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
+
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import { useEffect, useState } from "react";
 
 initializeAuthentiCation()
@@ -7,71 +8,110 @@ initializeAuthentiCation()
 
 const useFirebase = () => {
 
-    const googleProvider = new GoogleAuthProvider();
+    
     const auth = getAuth();
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+    const [isLoading, setIsLoading] = useState(true)
+
+
    
 
     const googleSingIn = () =>{
-
-        signInWithPopup(auth,googleProvider)
-        .then( (result) => {
-         setUser(result.user)
-        })
-        .catch((error) =>{
-            setError(error.message)
-        });
+        const googleProvider = new GoogleAuthProvider();
+         signInWithPopup(auth,googleProvider)
+         .then(result => {
+             setUser(result.user)
+         })
+       
     }
-//     const handelEmail = e =>{
-//         setEmail(e.target.value)
-//         }
-
-//         const handelPassword = e =>{
-//             setPassword(e.target.value)
-//            }
-    
-
-//     const emailSignIn = (e) => {
-//         e.preventDefault()
-//         console.log(email, password)
-//         createUserWithEmailAndPassword(auth, email, password)
-//        .then(result => {
-    
-//     console.log(result.user)
-  
-   
-//   })
- 
-    
-
     const logOut = () => {
-        signOut(auth).then(() => {
-            setUser({})
-          }).catch((error) => {
-           setError(error.message)
-          });
+        setIsLoading(true)
+        signOut(auth).then(() => { })
+        .finally(() => setIsLoading(false));
+          
     }
-
     useEffect(() => {
         
-        onAuthStateChanged(auth, (user) => {
+     const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
             
               setUser(user)
              
             } else {
-             setError("")
+             setUser({})
             }
+            setIsLoading(false)
           });
 
+          return () => unsubscribed;
+
     }, [])
+
+    const handelName =(e) =>{
+        setName(e.target.value)
+
+    }
+    const HandelEmail =(e) => {
+        setEmail(e.target.value)
+    }
+    const HandelPassword = (e) =>{
+        setPassword(e.target.value)
+    }
+    
+    const signUpEmail = (e) => {
+        
+        e.preventDefault();
+        if(password.length < 8){
+            setError('Passwoed Should be 2 uppercase and 8 character')
+            return;
+        }
+        createUserWithEmailAndPassword(auth, email, password)
+        .then(result => {
+            setUser(result.user);
+            console.log(result.user);
+            setError('Registation successful')
+            setUserName()
+          
+        })
+        .catch((error) => {
+            setError(error.message)
+        }) 
+    }
+
+    const setUserName = () =>{
+        updateProfile(auth.currentUser,{displayName: name})
+        .then(result => {  })
+    }
+
+    const signInEmail = (e) => {
+        e.preventDefault();
+       
+     return signInWithEmailAndPassword(auth, email, password)
+     
+     .catch((error) => {
+        setError(error.message)
+    })
+      
+    }
 
     return{
         user,
         error,
+        name,
+        email,
+        password,
+        isLoading,
         logOut,
         googleSingIn,
+        handelName,
+        HandelEmail,
+        HandelPassword,
+        signUpEmail,
+        signInEmail
       
     }
 }
