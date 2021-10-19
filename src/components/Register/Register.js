@@ -7,7 +7,7 @@ import './Register.css'
 import useAuht from '../../hooks/useAuth';
 
 const Register = () => {
-    const { handelName, error, signUpEmail, HandelPassword, HandelEmail } = useAuht()
+    const { handelName, error, signUpEmail, HandelPassword, HandelEmail , googleSingIn} = useAuht()
     return (
         <div className='register'>
             <div className="login-box d-flex align-items-center justify-content-center">
@@ -50,6 +50,10 @@ const Register = () => {
                                 value="Sign Up Now"
                             />
                         </form>
+                        <p className="mt-3 text-white">---OR---</p>
+                        <button onClick={googleSingIn} className="me-2 mb-3 btn btn-success" >
+                        Sign Up with Google <i class="fab fa-google"></i>
+                        </button>
                         <Link  to="/login" className='text-white' >
                             <p >Already Have An Account</p>
                         </Link>

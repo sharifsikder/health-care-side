@@ -22,10 +22,8 @@ const useFirebase = () => {
 
     const googleSingIn = () =>{
         const googleProvider = new GoogleAuthProvider();
-         signInWithPopup(auth,googleProvider)
-         .then(result => {
-             setUser(result.user)
-         })
+        return signInWithPopup(auth,googleProvider)
+         
        
     }
     const logOut = () => {
@@ -87,15 +85,9 @@ const useFirebase = () => {
         .then(result => {  })
     }
 
-    const signInEmail = (e) => {
-        e.preventDefault();
-       
+    const signInEmail = (e) => {  
      return signInWithEmailAndPassword(auth, email, password)
      
-     .catch((error) => {
-        setError(error.message)
-    })
-      
     }
 
     return{

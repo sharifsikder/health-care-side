@@ -1,0 +1,9 @@
+.image {
+    background-image: url("https://media.istockphoto.com/photos/http-404-error-not-found-page-concept-picture-id1041884806?b=1&k=20&m=1041884806&s=170667a&w=0&h=1Ww_T1HPpBssM2QR8WaSabOQAg58rFzMyTMaD49No5U=");
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
